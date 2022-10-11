@@ -53,6 +53,7 @@
     <!-- Vendors CSS -->
     <link rel="stylesheet" href="<?= base_url('assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css');?>" />
 
+
     <!-- Page CSS -->
     <!-- Page -->
     <link rel="stylesheet" href="<?= base_url('assets/vendor/css/pages/page-auth.css');?>" />

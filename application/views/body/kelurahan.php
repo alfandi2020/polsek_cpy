@@ -14,7 +14,7 @@
                     <div class="mb-3">
                       <div class="row">
                       <?php foreach ($data as $x) {?>
-                        <div class="col-md-2 col-xl-2 mb-5">
+                        <div class="col-md-4 col-xl-4 mb-5">
                           <div class="card h-100">
                             <img class="card-img-top" src="<?= base_url() ?>/assets/img/ceger.png"
                               alt="Card image cap" />

@@ -17,7 +17,7 @@ class Kelurahan extends CI_Controller {
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Tambah Permohonan",
-            'titlePage' => 'Data Kecamatan',
+            'titlePage' => 'Kecamatan',
             'data'=> $db
         ];
 

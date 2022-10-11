@@ -33,8 +33,6 @@
     <script>
   $(document).ready(function(){
     $('#tabel-data').DataTable();
-    $('#tabel-data2').DataTable();
-    $('#tabel-data3').DataTable();
 });
 var base_url = '<?=base_url()?>';
   </script>

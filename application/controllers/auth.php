@@ -45,7 +45,7 @@ class Auth extends CI_Controller {
                 ];
 
                 $this->session->set_userdata($data);
-                redirect('permohonan');
+                redirect('kelurahan');
             }else{
                 redirect('auth');
             }

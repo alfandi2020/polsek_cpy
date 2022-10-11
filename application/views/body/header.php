@@ -142,7 +142,7 @@
                   </g>
                 </svg>
               </span> -->
-              <span class="demo menu-text fw-bolder ms-2">Embun Pagi</span>
+              <span class="demo menu-text fw-bolder ms-2">Polsek Cipayung</span>
             </a>
 
             <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto d-block d-xl-none">
@@ -163,15 +163,15 @@
 
             <!-- Kas -->
             <li class="menu-item">
-              <a href="<?= base_url('permohonan');?>" class="menu-link">
+              <a href="<?= base_url('kelurahan');?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-money"></i>
                 <div data-i18n="Basic">Permohonan</div>
               </a>
             </li>
             <li class="menu-item">
-              <a href="<?= base_url('permohonan/list');?>" class="menu-link">
+              <a href="<?= base_url('user');?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-money"></i>
-                <div data-i18n="Basic">List Permohonan</div>
+                <div data-i18n="Basic">User</div>
               </a>
             </li>
 
@@ -247,7 +247,7 @@
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <div class="navbar-nav align-items-center">
-              <h3 class="align-items-center m-0"><?= $titlePage.' ' .$data[0]->kelurahan;?></h3>
+              <h3 class="align-items-center m-0"><?= $titlePage.' Cipayung' ;?></h3>
               </div>
               <!-- /Search -->
 

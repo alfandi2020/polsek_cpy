@@ -8,7 +8,7 @@
            <div class="card-body">
              <!-- Logo -->
              <div class="app-brand justify-content-center">
-               <a href="index.html" class="app-brand-link gap-2">
+               <!-- <a href="index.html" class="app-brand-link gap-2">
                  <span class="app-brand-logo demo">
                    <svg
                      width="25"
@@ -65,10 +65,10 @@
                    </svg>
                  </span>
                  <span class="app-brand-text demo text-body fw-bolder">Sneat</span>
-               </a>
+               </a> -->
              </div>
              <!-- /Logo -->
-             <h4 class="mb-2">Selamat Datang di Embun Pagi 👋</h4>
+             <h4 class="mb-2">Polsek Cipayung 👋</h4>
              <p class="mb-4">Mohon masuk dengan akun anda</p>
 
              <form id="formAuthentication" class="mb-3"  method="POST" action="<?= base_url('auth');?>">
