@@ -29,6 +29,10 @@
                           <label>Passowrd Konfirmasi</label>
                           <input type="text" class="form-control" name="passowrd_konfirmasi" required>
                         </div>
+                        <div class="col-md-4 col-xl-4 mb-3">
+                          <label>No Telp</label>
+                          <input type="number" class="form-control" name="telp" required>
+                        </div>
                       </div>
                       <div class="row mt-2">
                             <div class="col-md-4">
