@@ -50,7 +50,7 @@ class Kelurahan extends CI_Controller {
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Kriminal",
-            'titlePage' => 'View Kriminal',
+            'titlePage' => 'Kriminal',
             'data'=> $db
         ];
 

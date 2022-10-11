@@ -247,7 +247,7 @@
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
               <div class="navbar-nav align-items-center">
-              <h5 class="align-items-center m-0"><?= $titlePage.' Cipayung' ;?></h5>
+              <h6 class="align-items-center m-0"><?= $titlePage.' Cipayung' ;?></h6>
               </div>
               <!-- /Search -->
 

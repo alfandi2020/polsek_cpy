@@ -12,8 +12,8 @@ class Dashboard
 	{
         $data = [
             'nama' => $this->session->userdata('nama'),
-            'title' => "Selamat Datang di Dashboard Admin | Deigo Project",
-            'titlePage' => 'Dashboard Admin Deigo Project'
+            'title' => "Selamat Datang",
+            'titlePage' => 'Polsek Cipayung'
         ];
 
 		$this->load->view('body/header', $data);
