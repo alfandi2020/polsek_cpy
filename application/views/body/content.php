@@ -9,13 +9,12 @@
                     <div class="d-flex align-items-end row">
                       <div class="col-sm-7">
                         <div class="card-body">
-                          <h5 class="card-title text-primary">Congratulations <?= $nama;?>! 🎉</h5>
+                          <h5 class="card-title text-primary">Dashboard <?= $nama;?></h5>
                           <p class="mb-4">
-                            You have done <span class="fw-bold">72%</span> more sales today. Check your new badge in
-                            your profile.
+                            Comming Soon
                           </p>
 
-                          <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a>
+                          <!-- <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a> -->
                         </div>
                       </div>
                       <div class="col-sm-5 text-center text-sm-left">
@@ -32,7 +31,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-lg-4 col-md-4 order-1">
+                <!-- <div class="col-lg-4 col-md-4 order-1">
                   <div class="row">
                     <div class="col-lg-6 col-md-12 col-6 mb-4">
                       <div class="card">
@@ -103,9 +102,9 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!-- Total Revenue -->
-                <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
+                <!-- <div class="col-12 col-lg-8 order-2 order-md-3 order-lg-2 mb-4">
                   <div class="card">
                     <div class="row row-bordered g-0">
                       <div class="col-md-8">
@@ -160,11 +159,11 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Total Revenue -->
                 <div class="col-12 col-md-8 col-lg-4 order-3 order-md-2">
                   <div class="row">
-                    <div class="col-6 mb-4">
+                    <!-- <div class="col-6 mb-4">
                       <div class="card">
                         <div class="card-body">
                           <div class="card-title d-flex align-items-start justify-content-between">
@@ -223,10 +222,10 @@
                           <small class="text-success fw-semibold"><i class="bx bx-up-arrow-alt"></i> +28.14%</small>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                     <!-- </div>
-    <div class="row"> -->
-                    <div class="col-12 mb-4">
+                    <div class="row"> -->
+                    <!-- <div class="col-12 mb-4">
                       <div class="card">
                         <div class="card-body">
                           <div class="d-flex justify-content-between flex-sm-row flex-column gap-3">
@@ -246,13 +245,13 @@
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
               <div class="row">
                 <!-- Order Statistics -->
-                <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between pb-0">
                       <div class="card-title mb-0">
@@ -349,11 +348,11 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Order Statistics -->
 
                 <!-- Expense Overview -->
-                <div class="col-md-6 col-lg-4 order-1 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 order-1 mb-4">
                   <div class="card h-100">
                     <div class="card-header">
                       <ul class="nav nav-pills" role="tablist">
@@ -410,11 +409,11 @@
                       </div>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Expense Overview -->
 
                 <!-- Transactions -->
-                <div class="col-md-6 col-lg-4 order-2 mb-4">
+                <!-- <div class="col-md-6 col-lg-4 order-2 mb-4">
                   <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between">
                       <h5 class="card-title m-0 me-2">Transactions</h5>
@@ -531,7 +530,7 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+                </div> -->
                 <!--/ Transactions -->
               </div>
             </div>
