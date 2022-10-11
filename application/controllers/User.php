@@ -21,4 +21,17 @@ class User extends CI_Controller {
 		$this->load->view('body/user',$data);
 		$this->load->view('body/footer');
     }
+    function add()
+    {
+        $db = $this->db->get('users')->result();
+        $data = [
+            'nama' => $this->session->userdata('nama'),
+            'title' => "Users",
+            'titlePage' => 'Kecamatan Cipayung',
+            'data'=> $db
+        ];
+        $this->load->view('body/header', $data);
+		$this->load->view('body/add',$data);
+		$this->load->view('body/footer');
+    }
 }

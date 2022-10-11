@@ -50,7 +50,7 @@
         <div class="container-xxl flex-grow-1 container-p-y">
           <div class="row mb-3">
             <div class="col-md-4">
-              <a href="<?= base_url('permohonan/filter/data_baru') ?>" class="btn btn-label-primary active">Tambah User</a>&nbsp;&nbsp;&nbsp;&nbsp;
+              <a href="<?= base_url('user/add') ?>" class="btn btn-label-primary active">Tambah User</a>&nbsp;&nbsp;&nbsp;&nbsp;
             </div>
           </div>
           <div class="row">

@@ -17,7 +17,7 @@ class Kelurahan extends CI_Controller {
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Tambah Permohonan",
-            'titlePage' => 'Kecamatan',
+            'titlePage' => 'Kecamatan Cipayung',
             'data'=> $db
         ];
 
@@ -50,7 +50,7 @@ class Kelurahan extends CI_Controller {
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Kriminal",
-            'titlePage' => 'Kriminal',
+            'titlePage' => 'Maps Kriminal',
             'data'=> $db
         ];
 
