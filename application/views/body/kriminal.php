@@ -4,7 +4,7 @@
         <!-- Content -->
         <br>
         <div class="container-xxl flex-grow-1 container-p-y">
-        <div id="maps" style="width:100%;height:400px"></div>
+        <div id="maps" style="width:100%;height:600px"></div>
         </div>
 
         <!-- <div class="container-xxl flex-grow-1 container-p-y">
