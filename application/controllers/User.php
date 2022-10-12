@@ -36,11 +36,11 @@ class User extends CI_Controller {
                 $this->session->set_flashdata('msg','<div class="alert alert-success">User '.$this->input->post('username').' berhasil ditambah</div>');
             redirect('user');
             }else{
-                $this->session->set_flashdata('msg','<div class="alert alert-danger">User '.$this->input->post('username').' berhasil ditambah</div>');
+                $this->session->set_flashdata('msg','<div class="alert alert-danger">Password harus sama..!</div>');
                 redirect('user/add');
             }
         }else{
-            $this->session->set_flashdata('msg','<div class="alert alert-danger">User '.$this->input->post('username').' berhasil ditambah</div>');
+            $this->session->set_flashdata('msg','<div class="alert alert-danger">User '.$this->input->post('username').' sudah ada</div>');
             redirect('user/add');
         }
     }

@@ -313,7 +313,7 @@
                 <a href="<?= base_url('kelurahan') ?>" class="nav-link"><i class="bx bx-map bx-sm"></i> Kriminal</a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('user') ?>" class="nav-link active"><i class="bx bx-user bx-sm"></i> User</a>
+                <a href="<?= base_url('user') ?>" class="nav-link"><i class="bx bx-user bx-sm"></i> User</a>
               </li>
             </ul>
           </nav>
