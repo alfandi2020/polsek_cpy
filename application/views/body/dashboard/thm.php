@@ -16,6 +16,7 @@
                             <thead>
                                 <tr>
                                     <th>Kategori</th>
+                                    <th>Nama Tempat</th>
                                     <th>Alamat</th>
                                 </tr>
                             </thead>
@@ -23,6 +24,7 @@
                                 <?php foreach ($data as $x) {?>
                                 <tr>
                                     <td><?= $x->kategori ?></td>
+                                    <td><?=$x->keterangan?></td>
                                     <td><?=$x->alamat?></td>
                                 </tr>
                                 <?php } ?>

@@ -34,6 +34,7 @@ class Dashboard
     }
     function thm()
     {
+        $this->db->where('kategori',$this->session->userdata('kategori'));
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Selamat Datang",
@@ -44,6 +45,13 @@ class Dashboard
 		$this->load->view('body/header', $data);
 		$this->load->view('body/dashboard/thm');
 		$this->load->view('body/footer');
+    }
+    public function filter(){
+        if($this->uri->segment(3)){
+            $filter = $this->uri->segment(3);
+            $this->session->set_userdata('kategori', $filter);
+            redirect('dashboard/thm');
+        }
     }
     
    

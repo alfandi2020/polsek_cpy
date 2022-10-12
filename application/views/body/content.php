@@ -20,7 +20,7 @@
     </div>
     <div class="row text-center mt-4">
       <div class="col">
-        <a href="<?= base_url('dashboard/thm') ?>" class="btn btn-primary" style="width: 100%;">
+        <a href="<?= base_url('dashboard/filter/2') ?>" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           <span style="font-size: 13px;"> THM & Warung Miras</span>
         </a>
@@ -29,7 +29,7 @@
     </div>
     <div class="row text-center mt-4">
       <div class="col">
-        <a href="" class="btn btn-primary" style="width: 100%;">
+        <a href="<?= base_url('dashboard/filter/3') ?>" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           <span style="font-size: 13px;">Penyakit Masyarakat</span>
         </a>
