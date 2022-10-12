@@ -53,6 +53,22 @@ class Dashboard
             redirect('dashboard/thm');
         }
     }
+    function detail_pelaku()
+    {
+        $id = $this->uri->segment(3);
+        $this->db->where('id_kriminal',$id);
+        $pelaku = $this->db->get('dt_pelaku')->result();
+        $data = [
+            'nama' => $this->session->userdata('nama'),
+            'title' => "Selamat Datang",
+            'titlePage' => 'Polsek Cipayung',
+            'data' => $pelaku
+        ];
+        $this->load->view('body/header', $data);
+		$this->load->view('body/dashboard/detail_pelaku');
+		$this->load->view('body/footer');
+
+    }
     
    
 
