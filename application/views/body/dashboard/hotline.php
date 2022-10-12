@@ -2,8 +2,12 @@
   <!-- Content -->
 
   <div class="container-xxl flex-grow-1 container-p-y">
-    <div class="row">
+        <div class="row">
             <div class="card">
+                <div class="col-sm-4 mt-4">
+                <a href="javascript:history.back()" class="btn btn-warning"><i class='bx bx-left-arrow-alt'></i></a>
+
+                </div>
             <div class="card-body">
                 <h5 class="card-title">HOTLINE</h5>
                 <!-- <p class="card-text"> -->
