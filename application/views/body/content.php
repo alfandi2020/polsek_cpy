@@ -34,7 +34,9 @@
           <span style="font-size: 13px;">Penyakit Masyarakat</span>
         </a>
       </div>
-      <div class="col">
+    </div>
+    <div class="row text-center mt-4">
+    <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           3 C
