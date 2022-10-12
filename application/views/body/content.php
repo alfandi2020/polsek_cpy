@@ -7,13 +7,13 @@
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
-          Tawuran
+          <span style="font-size: 13px;">Tawuran</span>
         </a>
       </div>
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
-          Hotline
+          <span style="font-size: 13px;"> Hotline</span>
         </a>
       </div>
     </div>
@@ -21,13 +21,13 @@
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
-          THM & Warung Miras
+          <span style="font-size: 13px;"> THM & Warung Miras</span>
         </a>
       </div>
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <!-- <i class="bx bx-user bx-sm"></i><br> -->
-          Kejahatan Jalanan & kenakalan Remaja
+         <span style="font-size: 13px;"> Kejahatan Jalanan & kenakalan Remaja</span>
         </a>
       </div>
     </div>
@@ -35,7 +35,7 @@
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
-          Penyakit Masyarakat
+          <span style="font-size: 13px;">Penyakit Masyarakat</span>
         </a>
       </div>
       <div class="col">
