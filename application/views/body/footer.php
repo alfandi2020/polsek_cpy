@@ -39,7 +39,17 @@ var base_url = '<?=base_url()?>';
 
 <!-- Rupiah 1 -->
   <script type="text/javascript">
+	window.setTimeout(function() {
+			$(".alert-success").fadeTo(500, 0).slideUp(500, function() {
+				$(this).remove();
+			});
+		}, 3000);
 
+		window.setTimeout(function() {
+			$(".alert-danger").fadeTo(500, 0).slideUp(500, function() {
+				$(this).remove();
+			});
+		}, 3000);
 $(document).on('click', '.detail_permohonan2', function () {
     // e.preventDefault();
     var permohonan_id = this.id;

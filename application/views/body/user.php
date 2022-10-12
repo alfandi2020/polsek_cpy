@@ -57,6 +57,7 @@
             <!-- Form controls -->
             <div class="col-md-12">
               <div class="card mb-3">
+            <?= $this->session->flashdata('msg') ?>
                 <div class="card-datatable table-responsive">
                   <table id="tabel-data" class="datatables-basic table border-top">
                     <thead>

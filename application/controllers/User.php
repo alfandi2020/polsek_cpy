@@ -21,6 +21,29 @@ class User extends CI_Controller {
 		$this->load->view('body/user',$data);
 		$this->load->view('body/footer');
     }
+    function save()
+    {
+        $cek = $this->db->get_where('users',['username' => $this->input->post('username')])->num_rows();
+        if ($cek == 0) {
+            if ($this->input->post('password') == $this->input->post('password_konfirmasi')) {
+                $data = [
+                    "name" => $this->input->post('nama'),
+                    "username" => $this->input->post('username'),
+                    "password" => password_hash($this->input->post('password'),PASSWORD_DEFAULT),
+                    "phoneNumber" => $this->input->post('telp'),
+                ];
+                $this->db->insert('users',$data);
+                $this->session->set_flashdata('msg','<div class="alert alert-success">User '.$this->input->post('username').' berhasil ditambah</div>');
+            redirect('user');
+            }else{
+                $this->session->set_flashdata('msg','<div class="alert alert-danger">User '.$this->input->post('username').' berhasil ditambah</div>');
+                redirect('user/add');
+            }
+        }else{
+            $this->session->set_flashdata('msg','<div class="alert alert-danger">User '.$this->input->post('username').' berhasil ditambah</div>');
+            redirect('user/add');
+        }
+    }
     function add()
     {
         $db = $this->db->get('users')->result();
@@ -31,7 +54,7 @@ class User extends CI_Controller {
             'data'=> $db
         ];
         $this->load->view('body/header', $data);
-		$this->load->view('body/add',$data);
+		$this->load->view('body/add_user',$data);
 		$this->load->view('body/footer');
     }
 }

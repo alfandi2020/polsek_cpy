@@ -10,7 +10,8 @@
                 <div class="card mb-4">
                   <h5 class="card-header">Tambah User</h5>
                   <div class="card-body">
-                   
+                    <?= $this->session->flashdata('msg') ?>
+                   <form action="<?= base_url('user/save') ?>" method="POST">
                     <div class="mb-3">
                       <div class="row">
                         <div class="col-md-4 col-xl-4 mb-3">
@@ -23,15 +24,15 @@
                         </div>
                         <div class="col-md-4 col-xl-4 mb-3">
                           <label>Passowrd</label>
-                          <input type="text" class="form-control" name="passowrd" required>
+                          <input type="text" class="form-control" name="password" required>
                         </div>
                         <div class="col-md-4 col-xl-4 mb-3">
                           <label>Passowrd Konfirmasi</label>
-                          <input type="text" class="form-control" name="passowrd_konfirmasi" required>
+                          <input type="text" class="form-control" name="password_konfirmasi" required>
                         </div>
                         <div class="col-md-4 col-xl-4 mb-3">
                           <label>No Telp</label>
-                          <input type="number" class="form-control" name="telp" required>
+                          <input type="number" placeholder="081111" class="form-control" name="telp" required>
                         </div>
                       </div>
                       <div class="row mt-2">
@@ -40,7 +41,7 @@
                             </div>
                       </div>
                     </div>
-                    
+                   </form>
                     <!-- <div class="mb-3">
                       <button type="submit" class="btn btn-primary">Submit</button>
                     </div> -->
