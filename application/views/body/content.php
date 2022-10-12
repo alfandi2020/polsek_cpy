@@ -4,18 +4,19 @@
 
   <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row text-center">
+    <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <i class="bx bx-user bx-sm"></i><br>
+          <span style="font-size: 13px;"> Hotline</span>
+        </a>
+      </div>
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           <span style="font-size: 13px;">Tawuran</span>
         </a>
       </div>
-      <div class="col">
-        <a href="" class="btn btn-primary" style="width: 100%;">
-          <i class="bx bx-user bx-sm"></i><br>
-          <span style="font-size: 13px;"> Hotline</span>
-        </a>
-      </div>
+    
     </div>
     <div class="row text-center mt-4">
       <div class="col">
