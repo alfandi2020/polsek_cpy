@@ -307,6 +307,16 @@
               </ul>
             </div>
           </nav>
+          <nav class="navbar navbar-dark bg-primary navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
+            <ul class="navbar-nav nav-justified w-100">
+              <li class="nav-item">
+                <a href="<?= base_url('kelurahan') ?>" class="nav-link"><i class="bx bx-map bx-sm"></i> Kriminal</a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user') ?>" class="nav-link active"><i class="bx bx-user bx-sm"></i> User</a>
+              </li>
+            </ul>
+          </nav>
 
           <!-- / Navbar -->
 
