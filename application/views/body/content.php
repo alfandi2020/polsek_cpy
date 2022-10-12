@@ -3,92 +3,20 @@
   <!-- Content -->
 
   <div class="container-xxl flex-grow-1 container-p-y">
-    <div class="row">
-      <div class="col-lg-12 col-xs-3 mb-4 order-0">
-        <div class="d-flex align-items-end row">
-          <div class="col">
-            <div class="card">
-              <div class="card-body text-center">
-                <!-- <h5 class="card-title text-primary">Dashboard <?= $nama;?></h5> -->
-                <!-- <p class="mb-4">
-                            Comming Soon
-                          </p> -->
-                <a href="" class="btn btn-primary">
-                  <i class="bx bx-user bx-sm"></i><br>
-                  Tawuran
-                </a>
-                <!-- <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <div class="card-body text-center">
-                <!-- <h5 class="card-title text-primary">Dashboard <?= $nama;?></h5> -->
-                <!-- <p class="mb-4">
-                            Comming Soon
-                          </p> -->
-                <a href="" class="btn btn-primary">
-                  <i class="bx bx-user bx-sm"></i> <br>
-                  Hotline
-                </a>
-                <!-- <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="col mt-4">
-            <div class="card">
-              <div class="card-body text-center">
-                <!-- <h5 class="card-title text-primary">Dashboard <?= $nama;?></h5> -->
-                <!-- <p class="mb-4">
-                            Comming Soon
-                          </p> -->
-                <a href="" class="btn btn-primary">
-                  <i class="bx bx-user bx-sm"></i> <br>
-                  Intel Dasar
-                </a>
-                <!-- <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a> -->
-              </div>
-            </div>
-          </div>
-          <div class="col mt-4">
-            <div class="card">
-              <div class="card-body text-center">
-                <!-- <h5 class="card-title text-primary">Dashboard <?= $nama;?></h5> -->
-                <!-- <p class="mb-4">
-                            Comming Soon
-                          </p> -->
-                <a href="" class="btn btn-primary">
-                  <i class="bx bx-user bx-sm"></i> <br>
-                  THM & Warung Miras
-                </a>
-                <!-- <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a> -->
-              </div>
-            </div>
-          </div>
+      <div class="row">
+        <div class="col-sm-2">
+              <a href="" class="btn btn-primary">
+                    <i class="bx bx-user bx-sm"></i><br>
+                    Tawuran
+                  </a>
+        </div>
+        <div class="col-sm-2">
+              <a href="" class="btn btn-primary">
+                    <i class="bx bx-user bx-sm"></i><br>
+                    Tawuran
+                  </a>
         </div>
       </div>
-      <div class="col-lg-12 col-xs-3 mb-4 order-0">
-        <div class="d-flex align-items-end row">
-          <div class="col">
-            <div class="card">
-              <div class="card-body text-center">
-                <!-- <h5 class="card-title text-primary">Dashboard <?= $nama;?></h5> -->
-                <!-- <p class="mb-4">
-                            Comming Soon
-                          </p> -->
-                <a href="" class="btn btn-primary">
-                  <i class="bx bx-user bx-sm"></i> <br>
-                  Kejahatan Jalanan & <br> kenakalan Remaja
-                </a>
-                <!-- <a href="javascript:;" class="btn btn-sm btn-outline-primary">View Badges</a> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-    </div>
    
     <!-- <div class="col-lg-4 col-md-4 order-1">
                   <div class="row">
