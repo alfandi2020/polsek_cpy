@@ -13,8 +13,39 @@
                    
                     <div class="mb-3">
                       <div class="row">
-                      <?php foreach ($data as $x) {?>
-                        <div class="col-md-4 col-xl-4 mb-5">
+                      <?php //foreach ($data as $x) {?>
+                        <div class="col-md-12">
+                          <div class="card mb-3">
+                          <?= $this->session->flashdata('msg') ?>
+                            <div class="card-datatable table-responsive">
+                              <table id="tabel-data" class="datatables-basic table border-top">
+                                <thead>
+                                  <tr>
+                                    <th>No</th>
+                                    <th>Kasus Kriminal</th>
+                                    <th>Alamat</th>
+                                    <th>Titik Koordinat</th>
+                                    <th>Action</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                    <?php
+                                    $no =1;
+                                    foreach ($data as $x) { ?>
+                                        <tr>
+                                            <td><?= $no++; ?></td>
+                                            <td><?= $x->kategori ?></td>
+                                            <td><?= $x->alamat ?></td>
+                                            <td><?= $x->lat .', '. $x->lat ?></td>
+                                            <td><?= $x->date_created ?></td>
+                                        </tr>
+                                    <?php } ?>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="col-md-4 col-xl-4 mb-5">
                           <div class="card h-100">
                             <img class="card-img-top" src="<?= base_url() ?>/assets/img/ceger.png"
                               alt="Card image cap" />
@@ -25,8 +56,8 @@
                               <a href="<?= base_url('kelurahan/kriminal/'.$x->id) ?>" class="btn btn-outline-primary">Detail</a>
                             </div>
                           </div>
-                        </div>
-                      <?php } ?>
+                        </div> -->
+                      <?php //} ?>
 
                         
                         <!-- <div class="col-md-2 col-xl-2 mt-5">

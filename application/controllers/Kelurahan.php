@@ -13,7 +13,7 @@ class Kelurahan extends CI_Controller {
         // $this->db->select('*,a.kelurahan as kelurahan,b.kelurahan as id_kelurahan');
         // $this->db->from('dt_kelurahan as a');
         // $this->db->join('dt_kriminal as b','a.id=b.kelurahan');
-        $db = $this->db->get('dt_kelurahan')->result();
+        $db = $this->db->get('dt_kriminal')->result();
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Tambah Permohonan",
