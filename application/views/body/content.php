@@ -3,21 +3,49 @@
   <!-- Content -->
 
   <div class="container-xxl flex-grow-1 container-p-y">
-      <div class="row">
-        <div class="col-sm-2">
-              <a href="" class="btn btn-primary">
-                    <i class="bx bx-user bx-sm"></i><br>
-                    Tawuran
-                  </a>
-        </div>
-        <div class="col-sm-2">
-              <a href="" class="btn btn-primary">
-                    <i class="bx bx-user bx-sm"></i><br>
-                    Tawuran
-                  </a>
-        </div>
+    <div class="row text-center">
+      <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <i class="bx bx-user bx-sm"></i><br>
+          Tawuran
+        </a>
       </div>
-   
+      <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <i class="bx bx-user bx-sm"></i><br>
+          Hotline
+        </a>
+      </div>
+    </div>
+    <div class="row text-center mt-4">
+      <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <i class="bx bx-user bx-sm"></i><br>
+          THM & Warung Miras
+        </a>
+      </div>
+      <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <!-- <i class="bx bx-user bx-sm"></i><br> -->
+          Kejahatan Jalanan & kenakalan Remaja
+        </a>
+      </div>
+    </div>
+    <div class="row text-center mt-4">
+      <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <i class="bx bx-user bx-sm"></i><br>
+          Penyakit Masyarakat
+        </a>
+      </div>
+      <div class="col">
+        <a href="" class="btn btn-primary" style="width: 100%;">
+          <i class="bx bx-user bx-sm"></i><br>
+          3 C
+        </a>
+      </div>
+    </div>
+
     <!-- <div class="col-lg-4 col-md-4 order-1">
                   <div class="row">
                     <div class="col-lg-6 col-md-12 col-6 mb-4">
