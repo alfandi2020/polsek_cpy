@@ -20,6 +20,18 @@ class Dashboard
 		$this->load->view('body/content');
 		$this->load->view('body/footer');
 	}
+    function hotline()
+    {
+        $data = [
+            'nama' => $this->session->userdata('nama'),
+            'title' => "Selamat Datang",
+            'titlePage' => 'Polsek Cipayung'
+        ];
+
+		$this->load->view('body/header', $data);
+		$this->load->view('body/dashboard/hotline');
+		$this->load->view('body/footer');
+    }
     
    
 

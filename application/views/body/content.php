@@ -5,7 +5,7 @@
   <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row text-center">
     <div class="col">
-        <a href="" class="btn btn-primary" style="width: 100%;">
+        <a href="<?= base_url('dashboard/hotline') ?>" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-phone bx-sm"></i><br>
           <span style="font-size: 13px;"> Hotline</span>
         </a>
