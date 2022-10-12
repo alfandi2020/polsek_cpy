@@ -6,13 +6,13 @@
     <div class="row text-center">
     <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
-          <i class="bx bx-user bx-sm"></i><br>
+          <i class="bx bx-phone bx-sm"></i><br>
           <span style="font-size: 13px;"> Hotline</span>
         </a>
       </div>
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
-          <i class="bx bx-user bx-sm"></i><br>
+          <i class="bx bx-user-voice bx-sm"></i><br>
           <span style="font-size: 13px;">Tawuran</span>
         </a>
       </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="col">
         <a href="" class="btn btn-primary" style="width: 100%;">
-          <!-- <i class="bx bx-user bx-sm"></i><br> -->
+          <i class="bx bx-user-x bx-sm"></i><br>
          <span style="font-size: 13px;"> Kejahatan Jalanan & kenakalan Remaja</span>
         </a>
       </div>
