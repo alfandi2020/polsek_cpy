@@ -32,6 +32,19 @@ class Dashboard
 		$this->load->view('body/dashboard/hotline');
 		$this->load->view('body/footer');
     }
+    function thm()
+    {
+        $data = [
+            'nama' => $this->session->userdata('nama'),
+            'title' => "Selamat Datang",
+            'titlePage' => 'Polsek Cipayung',
+            'data' => $this->db->get('dt_kriminal')->result()
+        ];
+
+		$this->load->view('body/header', $data);
+		$this->load->view('body/dashboard/thm');
+		$this->load->view('body/footer');
+    }
     
    
 
