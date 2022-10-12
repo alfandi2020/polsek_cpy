@@ -158,7 +158,7 @@
             function initialize() {
                 // var latlong = 
             var propertiPeta = {
-                    center:new google.maps.LatLng(-6.230371,106.888113),
+                    center:new google.maps.LatLng(-6.298897,106.8989743),
                     zoom:15,
                     mapTypeId:google.maps.MapTypeId.ROADMAP
             };
@@ -168,7 +168,7 @@
             
             var infowindow<?= $i ?> = new google.maps.InfoWindow({
                 content: '<?= $data[$i]->alamat ?>',
-                position: new google.maps.LatLng(-6.230371,106.888113)
+                position: new google.maps.LatLng(-6.298897,106.8989743)
             });
             // membuat Marker
             var marker<?= $i ?> = new google.maps.Marker({

@@ -165,7 +165,7 @@
             <li class="menu-item">
               <a href="<?= base_url('kelurahan');?>" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-money"></i>
-                <div data-i18n="Basic">Maps Kriminal</div>
+                <div data-i18n="Basic">Kerawan Wilayah</div>
               </a>
             </li>
             <li class="menu-item">
