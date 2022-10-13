@@ -44,6 +44,11 @@ var base_url = '<?=base_url()?>';
 				$(this).remove();
 			});
 		}, 3000);
+	window.setTimeout(function() {
+			$(".alert-primary").fadeTo(500, 0).slideUp(500, function() {
+				$(this).remove();
+			});
+		}, 3000);
 
 		window.setTimeout(function() {
 			$(".alert-danger").fadeTo(500, 0).slideUp(500, function() {

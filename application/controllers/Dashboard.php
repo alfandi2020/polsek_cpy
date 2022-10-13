@@ -72,6 +72,37 @@ class Dashboard
 
     }
     
+   function add_kriminal()
+   {
+  
+    $data = [
+        'nama' => $this->session->userdata('nama'),
+        'title' => "Selamat Datang",
+        'titlePage' => 'Polsek Cipayung',
+    ];
+    $this->load->view('body/header', $data);
+    $this->load->view('body/dashboard/add_kriminal');
+    $this->load->view('body/footer');
+
+   }
+   function save_kriminal()
+   {
+    if ($this->input->post('kategori') && $this->input->post('kelurahan') && $this->input->post('alamat')) {
+        $insert = [
+            "kategori" => $this->input->post('kategori'),
+            "kelurahan" => $this->input->post('kelurahan'),
+            "alamat" => $this->input->post('alamat'),
+            "alamat_maps" => $this->input->post('alamat_maps'),
+            "keterangan" => $this->input->post('keterangan'),
+        ];
+        $this->db->insert('dt_kriminal',$insert);
+        $this->session->set_flashdata('msg','<div class="alert alert-primary">Data pelanggaran '.$this->input->post('keterangan').' berhasil di input</div>');
+        redirect('dashboard/add_kriminal');
+       }else{
+        $this->session->set_flashdata('msg','<div class="alert alert-danger">Data pelanggaran harus lengkap</div>');
+        redirect('dashboard/add_kriminal');
+       }
+   }
    
 
     
