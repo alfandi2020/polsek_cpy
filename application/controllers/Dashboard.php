@@ -56,8 +56,10 @@ class Dashboard
     function detail_pelaku()
     {
         $id = $this->uri->segment(3);
-        $this->db->where('id_kriminal',$id);
-        $pelaku = $this->db->get('dt_pelaku')->result();
+        $this->db->select('*,a.id_kriminal as uniq_kirminal');
+        $this->db->where('a.id_kriminal',$id);
+        $this->db->join('dt_kriminal as a','a.id_kriminal=b.id_kriminal');
+        $pelaku = $this->db->get('dt_pelaku as b')->result();
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Selamat Datang",
