@@ -42,6 +42,12 @@
                             <textarea disabled type="text" name="alamat_maps" rows="3" class="form-control alamat"></textarea>
                         </div>
                         <div class="col-md-4 mt-4">
+                        <div id="my_camera"></div>
+                        <div id="results"></div><br>
+                        <input type="button" value="Ambil gambar" onClick="take_snapshot()" class="btn btn-primary" />
+
+                        </div>
+                        <div class="col-md-4 mt-4">
                             <label>Keterangan</label>
                            <textarea name="keterangan" placeholder="Nongkrong / tawuran" class="form-control" id="" cols="30" rows="2"></textarea>
                         </div>
@@ -56,7 +62,37 @@
         </div>
     </div>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
 
+<script language="JavaScript">
+        Webcam.set({
+            // width: 400,
+            height: 300,
+            image_format: "jpeg",
+            jpeg_quality: 90,
+        });
+        Webcam.attach("#my_camera");
+        // var data_uri = '';
+        //         if (data_uri == '') {
+        //             $(".res").addClass('invisible')
+        //         }else{
+        //             $(".res").addClass('visible')
+        //         }
+        function take_snapshot() {
+            Webcam.snap(function (data_uri) {
+                $(".image-tag").val(data_uri);
+                if (data_uri) {
+                    $(".cam").remove();
+                }                
+                document.getElementById('my_camera').style.display= "none";
+                console.log(data_uri)
+                // console.log(data_uri)
+                document.getElementById("results").innerHTML =
+                    '<img src="' + data_uri + '"/>';
+            });
+        }
+
+    </script>
 <script src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script type="text/javascript">
 if (navigator.geolocation) {
