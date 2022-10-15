@@ -46,7 +46,7 @@
                             <tbody>
                                 <?php foreach ($data as $x) {?>
                                 <tr>
-                                    <td><?= $x->kategori ?></td>
+                                    <td><?= $x->kelurahan ?></td>
                                     <td><?=$x->keterangan?></td>
                                     <td><?=$x->alamat?></td>
                                     <td>
