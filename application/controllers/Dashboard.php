@@ -34,12 +34,19 @@ class Dashboard
     }
     function thm()
     {
+        $cek = $this->db->get_where('dt_kriminal',['kelurahan' => isset($_GET['kelurahan'])])->num_rows();
+        $this->db->select('*,b.kelurahan as nama_kelurahan,b.kelurahan as id_kelurahan');
+        if ($cek == true) {
+         $this->db->where('a.kelurahan',$this->input->get('kelurahan'));
+        }
         $this->db->where('kategori',$this->session->userdata('kategori'));
+        $this->db->join('dt_kelurahan as b','a.kelurahan=b.id');
+       $ppp = $this->db->get('dt_kriminal as a')->result();
         $data = [
             'nama' => $this->session->userdata('nama'),
             'title' => "Selamat Datang",
             'titlePage' => 'Polsek Cipayung',
-            'data' => $this->db->get('dt_kriminal')->result()
+            'data' => $ppp
         ];
 
 		$this->load->view('body/header', $data);

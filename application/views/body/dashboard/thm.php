@@ -5,27 +5,34 @@
         <div class="row">
             <div class="card">
                 <div class="col-sm-4 mt-4">
-                    <a href="javascript:history.back()" class="btn btn-warning"><i class='bx bx-left-arrow-alt'></i></a>
+                    <a href="<?= base_url('dashboard') ?>" class="btn btn-warning"><i class='bx bx-left-arrow-alt'></i></a>
 
                 </div>
                 <div class="card-body">
-                    <?php if($data[0]->kategori == '2'){ ?>
+                    <?php if(isset($data[0]->kategori) == '2'){ ?>
                     <h5 class="card-title">THM & Warung Miras</h5>
-                    <?php }else if($data[0]->kategori == '3'){ ?>
+                    <?php }else if(isset($data[0]->kategori) == '3'){ ?>
                     <h5 class="card-title">Penyakit Masyarakat</h5>
-                    <?php }else if($data[0]->kategori == '4'){ ?>
+                    <?php }else if(isset($data[0]->kategori) == '4'){ ?>
                     <h5 class="card-title">3C</h5>
-                    <?php }else if($data[0]->kategori == '5'){ ?>
+                    <?php }else if(isset($data[0]->kategori) == '5'){ ?>
                     <h5 class="card-title">Kejahatan Jalanan & Kenakalan Remaja</h5>
                     <?php } ?>
                     <!-- <p class="card-text"> -->
-                    <select name="kelurahan" class="form-control">
+                     <form method="get">   
+                    <select name="kelurahan" class="form-control" onchange="form.submit()">
                         <option selected disabled>Pilih Kelurahan</option>
                         <?php $db = $this->db->get('dt_kelurahan')->result(); 
                         foreach ($db as $x) { ?>
-                            <option value="<?= $x->id ?>"><?= $x->kelurahan ?></option>
+                            <option <?= $_GET['kelurahan'] == $x->id ? 'selected' : '' ?> value="<?= $x->id ?>"><?= $x->kelurahan ?></option>
                         <?php } ?>
                     </select>
+                     </form><br>
+                     <?php if(isset($_GET['kelurahan'])) { ?>
+                     <h6>Kelurahan : <?= isset($data[0]->kelurahan) ?></h6>
+                     <?php }else{ ?>
+                        Kelurahan : Data kosong
+                        <?php } ?>
                     <div class="card-datatable table-responsive">
                         <table id="tabel-data" class="datatables-basic table">
                             <thead>

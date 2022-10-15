@@ -108,7 +108,7 @@ if (navigator.geolocation) {
             return responseText.json();
         })
         .then(jsonData => {
-            console.log(jsonData.results[0].formatted_address);
+            console.log(jsonData.results);
             // var xx = '';
             // for (let i = 3; i <script jsonData.results[0].address_components.length; i++) {
             //     const element = jsonData.results[0].address_components[i].long_name + ' ';
