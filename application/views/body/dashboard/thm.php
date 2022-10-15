@@ -24,7 +24,7 @@
                         <option selected disabled>Pilih Kelurahan</option>
                         <?php $db = $this->db->get('dt_kelurahan')->result(); 
                         foreach ($db as $x) { ?>
-                            <option <?= $_GET['kelurahan'] == $x->id ? 'selected' : '' ?> value="<?= $x->id ?>"><?= $x->kelurahan ?></option>
+                            <option <?= isset($_GET['kelurahan']) == $x->id ? 'selected' : '' ?> value="<?= $x->id ?>"><?= $x->kelurahan ?></option>
                         <?php } ?>
                     </select>
                      </form><br>
