@@ -39,7 +39,7 @@ class Auth extends CI_Controller {
             if(password_verify($password, $user['password'])) {
                 $data = [
                     'id_user' => $user['id'],
-                    'nama' => $user['nama'],
+                    'nama' => $user['name'],
                     'username' => $user['username'],
                     'level' => $user['level']
                 ];

@@ -40,6 +40,7 @@
                                     <th>Kategori</th>
                                     <th>Nama Tempat</th>
                                     <th>Alamat</th>
+                                    <th>Tanggal Kejadian</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
@@ -49,6 +50,7 @@
                                     <td><?= $x->kelurahan ?></td>
                                     <td><?=$x->keterangan?></td>
                                     <td><?=$x->alamat?></td>
+                                    <td><?=$x->date_created?></td>
                                     <td>
                                         <a href="<?= base_url('dashboard/detail_pelaku/'.$x->id_kriminal) ?>" class="btn btn-primary">Detail</a>
                                     </td>

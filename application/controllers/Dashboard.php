@@ -78,7 +78,17 @@ class Dashboard
 		$this->load->view('body/footer');
 
     }
-    
+    function informasi()
+    {
+        $data = [
+            'nama' => $this->session->userdata('nama'),
+            'title' => "Selamat Datang",
+            'titlePage' => 'Polsek Cipayung',
+        ];
+        $this->load->view('body/header', $data);
+        $this->load->view('body/dashboard/informasi');
+        $this->load->view('body/footer');
+    }
    function add_kriminal()
    {
   
@@ -110,7 +120,41 @@ class Dashboard
         redirect('dashboard/add_kriminal');
        }
    }
-   
+   function ada_polisi()
+   {
+    $data = [
+        'nama' => $this->session->userdata('nama'),
+        'title' => "Selamat Datang",
+        'titlePage' => 'Polsek Cipayung',
+        'data' => $this->db->get('tb_ada_polisi')->result()
+    ];
+    $this->load->view('body/header', $data);
+    $this->load->view('body/dashboard/ada_polisi');
+    $this->load->view('body/footer');
+   }
+   function save_ada_polisi()
+   {
+       $today = date('Y-m-d');
+    $umur = date_diff(date_create($this->input->post('tgl_lahir')), date_create($today));
+    // if ($diff->format('%y') < 18) {
+       $insert = [
+        "nama" => $this->input->post('nama_petugas'),
+        "id_kelurahan" => $this->input->post('kelurahan'),
+        "nama_lengkap_target" => $this->input->post('nama_pelaku'),
+        "tempat_lahir" => $this->input->post('tempat_lahir'),
+        "tgl_lahir" => $this->input->post('tgl_lahir'),
+        "umur" => $umur->format('%y'),
+        "nomor_hp" => $this->input->post('no_hp'),
+        "alamat" => $this->input->post('alamat'),
+        "pekerjaan" => $this->input->post('pekerjaan'),
+        "nama_ibu" => $this->input->post('nama_ibu'),
+        "pekerjaan_bapak" => $this->input->post('pekerjaan_bapak'),
+        "kasus" => $this->input->post('kasus_history'),
+        "motif" => $this->input->post('motif'),
+       ];
+       $this->db->insert('tb_ada_polisi',$insert);
+       redirect('dashboard/ada_polisi');
+   }
 
     
 }
