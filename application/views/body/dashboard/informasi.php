@@ -9,7 +9,7 @@
 
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title">HOTLINE</h5>
+                    <h5 class="card-title">Informasi</h5>
                     <!-- <p class="card-text"> -->
                     <a
                         href="https://api.whatsapp.com/send/?phone=6285945723077&text=Selamat%20datang%20di%20whatsapp%20resmi%20polsek%20cipayung,%20ada%20yang%20bisa%20kami%20bantu?&type=phone_number&app_absent=0">

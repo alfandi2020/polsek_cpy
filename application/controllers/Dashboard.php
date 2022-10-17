@@ -153,7 +153,19 @@ class Dashboard
         "motif" => $this->input->post('motif'),
        ];
        $this->db->insert('tb_ada_polisi',$insert);
-       redirect('dashboard/ada_polisi');
+       redirect('dashboard/personil');
+   }
+   function personil()
+   {
+    $data = [
+        'nama' => $this->session->userdata('nama'),
+        'title' => "Selamat Datang",
+        'titlePage' => 'Polsek Cipayung',
+        'data' => $this->db->get('tb_ada_polisi')->result()
+    ];
+    $this->load->view('body/header', $data);
+    $this->load->view('body/dashboard/personil');
+    $this->load->view('body/footer');
    }
 
     
