@@ -234,7 +234,7 @@
         <div class="layout-page">
           <!-- Navbar -->
 
-          <nav
+          <!-- <nav
             class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
             id="layout-navbar"
           >
@@ -245,16 +245,12 @@
             </div>
 
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
               <div class="navbar-nav align-items-center">
               <h6 class="align-items-center m-0"><?= $titlePage ;?></h6>
               </div>
-              <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Place this tag where you want the button to render. -->
-
-                <!-- User -->
+              
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
@@ -303,10 +299,9 @@
                     </li>
                   </ul>
                 </li>
-                <!--/ User -->
               </ul>
             </div>
-          </nav>
+          </nav> -->
           <nav class="navbar navbar-dark bg-primary navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
             <ul class="navbar-nav nav-justified w-100">
               <li class="nav-item">
