@@ -19,7 +19,11 @@
         <ol class="carousel-indicators">
           <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
           <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
-          <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="3"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="4"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="6"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="7"></li>
         </ol>
         <div class="carousel-inner">
           <?php for ($i=0; $i <7 ; $i++) {  ?>
