@@ -1,3 +1,17 @@
+
+<style>
+  .carousel .carousel-item {
+  height: 300px;
+}
+
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+</style>
 <!-- Content wrapper -->
 <div class="content-wrapper">
   <!-- Content -->
