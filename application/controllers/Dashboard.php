@@ -161,11 +161,125 @@ class Dashboard
         'nama' => $this->session->userdata('nama'),
         'title' => "Selamat Datang",
         'titlePage' => 'Polsek Cipayung',
-        'data' => $this->db->get('tb_ada_polisi')->result()
+        'data' => $this->db->get('dt_personil')->result()
     ];
     $this->load->view('body/header', $data);
-    $this->load->view('body/dashboard/personil');
+    $this->load->view('body/dashboard/personil/personil');
     $this->load->view('body/footer');
+   }
+   function detail_personil()
+   {
+    $this->db->where('id_personil',$this->uri->segment(3));
+    $detail = $this->db->get('dt_personil')->row_array();
+    $data = [
+        'nama' => $this->session->userdata('nama'),
+        'title' => "Selamat Datang",
+        'titlePage' => 'Polsek Cipayung',
+        'data' => $detail
+    ];
+    $this->load->view('body/header', $data);
+    $this->load->view('body/dashboard/personil/detail_personil');
+    $this->load->view('body/footer');
+   }
+   function save_personil()
+   {
+        $target_dir = "upload/foto/";
+        $file = $_FILES['foto']['name'];
+        $path = pathinfo($file);
+        $filename = time().'_'.$path['filename'];
+        $ext = $path['extension'];
+        $temp_name = $_FILES['foto']['tmp_name'];
+        $path_filename_ext = $target_dir.$filename.".".$ext;
+        move_uploaded_file($temp_name,$path_filename_ext);
+        
+       $insert = [
+           "nama" => $this->input->post('nama'),
+           "pangkat" => $this->input->post('pangkat'),
+           "nrp" => $this->input->post('nrp'),
+           "jabatan" => $this->input->post('jabatan'),
+           "tmt" => $this->input->post('tmt'),
+           "mulai_menjabat" => $this->input->post('mulai_menjabat'),
+           "tempat_lahir" => $this->input->post('tempat_lahir'),
+           "tgl_lahir" => $this->input->post('tgl_lahir'),
+           "agama" => $this->input->post('agama'),
+           "suku" => $this->input->post('suku'),
+           "status_personil" => $this->input->post('status_personil'),
+           "foto" => $filename . $ext
+       ];
+       $this->db->insert('dt_personil',$insert);
+       redirect('dashboard/personil');
+   }
+   function save_detail_personil()
+   {
+       $id_personil = $this->input->post('id_personil');
+       $status= $this->input->post('status');
+       if ($status == 'pendidikan_personil') {
+           $insert = [
+                "id_personil" => $id_personil,
+                "tingkat" => $this->input->post('tingkat'),  
+                "tahun" => $this->input->post('tahun'),  
+           ];
+           $this->db->insert('dt_personil_pendidikan',$insert);
+           $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Pendidikan Kepolisian Berhasil ditambah</div>');
+           redirect('dashboard/detail_personil/'.$id_personil);
+       }else if ($status == 'pendidikan_umum') {
+            $insert = [
+                "id_personil" => $id_personil,
+                "tingkat" => $this->input->post('tingkat'),  
+                "nama_institusi" => $this->input->post('nama_institusi'),  
+                "tahun" => $this->input->post('tahun'),  
+            ];
+            $this->db->insert('dt_personil_pendidikan_umum',$insert);
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Pendidikan Umum Berhasil ditambah</div>');
+            redirect('dashboard/detail_personil/'.$id_personil);
+       }else if ($status == 'riwayat_pangkat') {
+            $insert = [
+                "id_personil" => $id_personil,
+                "pangkat" => $this->input->post('pangkat'),  
+                "tmt" => $this->input->post('tmt'),  
+            ];
+            $this->db->insert('dt_personil_riwayat_pangkat',$insert);
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Riwayat Pangkat Berhasil ditambah</div>');
+            redirect('dashboard/detail_personil/'.$id_personil);
+       }else if ($status == 'riwayat_jabatan') {
+            $insert = [
+                "id_personil" => $id_personil,
+                "jabatan" => $this->input->post('jabatan'),  
+                "tmt" => $this->input->post('tmt'),  
+            ];
+            $this->db->insert('dt_personil_riwayat_jabatan',$insert);
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Riwayat Jabatan Berhasil ditambah</div>');
+            redirect('dashboard/detail_personil/'.$id_personil);
+       }else if ($status == 'pendidkan_pengemban') {
+            $insert = [
+                "id_personil" => $id_personil,
+                "dikbang" => $this->input->post('dikbang'),  
+                "tmt" => $this->input->post('tmt'),  
+            ];
+            $this->db->insert('dt_personil_riwayat_pangkat',$insert);
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Pendidikan Pengembangan & Pelatihan Berhasil ditambah</div>');
+            redirect('dashboard/detail_personil/'.$id_personil);
+       }
+       else if ($status == 'tanda_kehormatan') {
+            $insert = [
+                "id_personil" => $id_personil,
+                "tanda_kehormatan" => $this->input->post('tanda_kehormatan'),  
+                "tmt" => $this->input->post('tmt'),  
+            ];
+            $this->db->insert('dt_personil_riwayat_pangkat',$insert);
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Pendidikan Pengembangan & Pelatihan Berhasil ditambah</div>');
+            redirect('dashboard/detail_personil/'.$id_personil);
+       }
+       else if ($status == 'kemampuan_bahasa') {
+            $insert = [
+                "id_personil" => $id_personil,
+                "bahasa" => $this->input->post('bahasa'),  
+                "status" => $this->input->post('status'),  
+            ];
+            $this->db->insert('dt_personil_riwayat_pangkat',$insert);
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Data Kemampuan Bahasa Berhasil ditambah</div>');
+            redirect('dashboard/detail_personil/'.$id_personil);
+       }
    }
 
     

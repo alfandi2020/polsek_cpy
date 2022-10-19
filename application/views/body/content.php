@@ -1,10 +1,47 @@
 <!-- Content wrapper -->
 <div class="content-wrapper">
   <!-- Content -->
-
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="<?= base_url() ?>assets/img/elements/13.jpg" alt="First slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>First slide</h3>
+              <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="<?= base_url() ?>assets/img/elements/2.jpg" alt="Second slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Second slide</h3>
+              <p>In numquam omittam sea.</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="<?= base_url() ?>assets/img/elements/18.jpg" alt="Third slide" />
+            <div class="carousel-caption d-none d-md-block">
+              <h3>Third slide</h3>
+              <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </a>
+      </div>
   <div class="container-xxl flex-grow-1 container-p-y">
     <div class="row text-center">
-    <div class="col">
+      <div class="col">
         <a href="<?= base_url('dashboard/hotline') ?>" class="btn btn-warning" style="width: 100%;">
           <i class="bx bx-phone bx-sm"></i><br>
           <span style="font-size: 13px;"> Hotline</span>
@@ -12,7 +49,7 @@
       </div>
       <div class="col">
         <a href="<?= base_url('dashboard/add_kriminal') ?>" class="btn btn-warning" style="width: 100%;">
-        <i class='bx bx-map' ></i><br>
+          <i class='bx bx-map'></i><br>
           <span style="font-size: 12px;">Tambah Data Pelanggaran</span>
         </a>
       </div>
@@ -51,7 +88,7 @@
       </div>
     </div>
     <div class="row text-center mt-4">
-    <div class="col">
+      <div class="col">
         <a href="<?= base_url('dashboard/filter/4') ?>" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           3 C
@@ -62,11 +99,11 @@
       <div class="col">
         <a href="<?= base_url('dashboard/filter/5') ?>" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user-x bx-sm"></i><br>
-         <span style="font-size: 13px;"> Kejahatan Jalanan & kenakalan Remaja</span>
+          <span style="font-size: 13px;"> Kejahatan Jalanan & kenakalan Remaja</span>
         </a>
       </div>
     </div>
-
+    <br><br><br>
     <!-- <div class="col-lg-4 col-md-4 order-1">
                   <div class="row">
                     <div class="col-lg-6 col-md-12 col-6 mb-4">

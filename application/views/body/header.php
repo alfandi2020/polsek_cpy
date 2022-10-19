@@ -67,7 +67,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/datatables_jquery_datatables.checkboxes.css') ?>">
     <link rel="stylesheet" href="<?= base_url('assets/css/datatables_buttons.bootstrap5.css') ?>">
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoFxDFopLH3efkmpRLYbpSfZeOgT-tHHE"></script> 
-
+    <link rel="stylesheet" href="<?= base_url() ?>assets/vendor/css/pages/ui-carousell.css" />
     <!-- Page CSS -->
 
     <!-- Helpers -->

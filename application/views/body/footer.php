@@ -22,6 +22,7 @@
   <script src="<?=  base_url() ?>assets/vendor/libs/datatables/datatables.checkboxes.js"></script>
   <script src="<?=  base_url() ?>assets/vendor/libs/datatables/datatables-buttons.js"></script>
   <script src="<?=  base_url() ?>assets/vendor/libs/datatables/buttons.bootstrap5.js"></script>
+  <script src="<?= base_url() ?>assets/js/ui-carousel.js"></script>
 <script src="<?= base_url() ?>assets/custom.js"></script>
     <!-- Main JS -->
     <script src="<?= base_url('assets/js/main.js');?>"></script>

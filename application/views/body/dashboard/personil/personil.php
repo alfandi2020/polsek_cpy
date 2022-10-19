@@ -11,7 +11,7 @@
                 <!-- <div class="card-body"> -->
                     <br>
                     <br>
-                    <h5 class="card-title mt-5">Data Ada Polisi</h5>
+                    <h5 class="card-title mt-5">Data Personil</h5>
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="card-datatable table-responsive">
@@ -32,10 +32,10 @@
                                         <tr>
                                             <td><?= $no++; ?></td>
                                             <td><?= $x->nama ?></td>
-                                            <td><?= $x->alamat ?></td>
-                                            <td><?= $x->nama_lengkap_target ?></td>
+                                            <td><?= $x->nama ?></td>
+                                            <td><?= $x->nama ?></td>
                                             <td>
-                                                <a href="" class="btn btn-warning">View</a>
+                                                <a href="<?= base_url('dashboard/detail_personil/'.$x->id_personil) ?>" class="btn btn-warning">View</a>
                                             </td>
                                         </tr>
                                         <?php } ?>
@@ -58,6 +58,16 @@
                                     class="form-control" required name="nama">
                             </div>
                             <div class="col-md-2 mt-4">
+                                <label>Jabatan</label>
+                                <input type="text"
+                                    class="form-control" placeholder="Kanit" required name="jabatan">
+                            </div>
+                            <div class="col-md-2 mt-4">
+                                <label>TMT</label>
+                                <input type="text"
+                                    class="form-control" required name="tmt">
+                            </div>
+                            <div class="col-md-2 mt-4">
                                 <label>Pangkat</label>
                                 <select name="pangkat" id="" class="form-control">
                                     <option value="">Pilih Pangkat</option>
@@ -74,32 +84,51 @@
                             </div>
                             <div class="col-md-2 mt-4">
                                 <label>Agama</label>
-                                <input type="text" class="form-control" required name="nrp">
+                                <input type="text" class="form-control" required name="agama">
                             </div>
-                            <div class="col-md-2 mt-4">
-                                <label>Suku</label>
-                                <input type="text" class="form-control" required name="nrp">
-                            </div>
-                            <div class="col-md-2 mt-4">
-                                <label>Status Personil</label>
-                                <input type="text" class="form-control" required name="nrp">
-                            </div>
+                         
+                          
                         </div>
                         <div class="row mt-4 mb-4">
                             <div class="col-md-2 mt-4">
                                 <label>Tempat Lahir</label>
                                 <input type="text"
-                                    class="form-control" required name="nama">
+                                    class="form-control" required name="tempat_lahir">
                             </div>
                             <div class="col-md-2 mt-4">
                                 <label>Tempat Tgl Lahir</label>
                                 <input type="date"
-                                    class="form-control" required name="nama">
+                                    class="form-control" required name="tgl_lahir">
                             </div>
                             <div class="col-md-2 mt-4">
                                 <label>Mulai Menjabat</label>
                                 <input type="date"
-                                    class="form-control" required name="nama">
+                                    class="form-control" required name="mulai_menjabat">
+                            </div>
+                            <div class="col-md-2 mt-4">
+                                <label>Suku</label>
+                                <input type="text" class="form-control" required name="suku">
+                            </div>
+                            <div class="col-md-2 mt-4">
+                                <label>Foto</label>
+                                <input type="file" class="form-control" required name="foto">
+                            </div>
+                            <div class="col-md-2 mt-4">
+                                <label>Status Personil</label>
+                                <div class="form-check mt-3">
+                                    <input name="status_personil" value="Aktif" class="form-check-input" type="radio"
+                                        id="defaultRadioInputx" />
+                                    <label class="form-check-label" for="defaultRadioInputx">
+                                       Aktif
+                                    </label>
+                                </div>
+                                <div class="form-check mt-3">
+                                    <input name="status_personil" class="form-check-input" type="radio"
+                                        id="defaultRadioInputxx" value="Tidak Aktif" />
+                                    <label class="form-check-label" for="defaultRadioInputxx">
+                                       Tidak Aktif
+                                    </label>
+                                </div>
                             </div>
                         </div>
                          <!-- <div class="col-md-4">
