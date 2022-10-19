@@ -22,14 +22,16 @@
           <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img class="d-block w-100" src="<?= base_url() ?>assets/img/elements/13.jpg" alt="First slide" />
+          <?php for ($i=0; $i <7 ; $i++) {  ?>
+          <div class="carousel-item <?= $i == 1 ?'active' : '' ?>">
+            <img style="height: 300px;" class="d-block w-100" src="<?= base_url() ?>upload/banner/<?= $i ?>.jpg" alt="First slide" />
             <div class="carousel-caption d-none d-md-block">
               <h3>First slide</h3>
               <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
             </div>
           </div>
-          <div class="carousel-item">
+          <?php } ?>
+          <!-- <div class="carousel-item">
             <img class="d-block w-100" src="<?= base_url() ?>assets/img/elements/2.jpg" alt="Second slide" />
             <div class="carousel-caption d-none d-md-block">
               <h3>Second slide</h3>
@@ -42,7 +44,7 @@
               <h3>Third slide</h3>
               <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
             </div>
-          </div>
+          </div> -->
         </div>
         <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
