@@ -12,9 +12,10 @@
 =========================================================
  -->
 <!-- beautify ignore:start -->
-<?php if(!isset($this->session->userdata['username'])) {
-  redirect('auth');
-}
+<?php 
+// if(!isset($this->session->userdata['username'])) {
+//   redirect('login');
+// }
 ?>
 
 <html

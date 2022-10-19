@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Auth extends CI_Controller {
+class Login extends CI_Controller {
 
     public function __construct()
     {
@@ -47,10 +47,10 @@ class Auth extends CI_Controller {
                 $this->session->set_userdata($data);
                 redirect('dashboard');
             }else{
-                redirect('auth');
+                redirect('login');
             }
         }else{
-            redirect('auth');
+            redirect('login');
         }
     }
 
@@ -59,6 +59,6 @@ class Auth extends CI_Controller {
         $this->session->unset_userdata('id_users');
         $this->session->unset_userdata('nama');
         $this->session->unset_userdata('username');
-        redirect('auth');
+        redirect('login');
     }
 }

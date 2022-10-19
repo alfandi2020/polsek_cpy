@@ -24,9 +24,10 @@
           <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
           <li data-bs-target="#carouselExample" data-bs-slide-to="6"></li>
           <li data-bs-target="#carouselExample" data-bs-slide-to="7"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="8"></li>
         </ol>
         <div class="carousel-inner">
-          <?php for ($i=0; $i <7 ; $i++) {  ?>
+          <?php for ($i=0; $i <8 ; $i++) {  ?>
           <div class="carousel-item <?= $i == 1 ?'active' : '' ?>">
             <img style="height: 300px;" class="d-block w-100" src="<?= base_url() ?>upload/banner/<?= $i ?>.jpg" alt="First slide" />
             <div class="carousel-caption d-none d-md-block">
