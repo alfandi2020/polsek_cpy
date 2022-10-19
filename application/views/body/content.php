@@ -17,8 +17,8 @@
   <!-- Content -->
       <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
         <ol class="carousel-indicators">
-          <li data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#carouselExample" data-bs-slide-to="1"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="1" class="active"></li>
+          <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
           <li data-bs-target="#carouselExample" data-bs-slide-to="3"></li>
           <li data-bs-target="#carouselExample" data-bs-slide-to="4"></li>
           <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
@@ -27,13 +27,13 @@
           <li data-bs-target="#carouselExample" data-bs-slide-to="8"></li>
         </ol>
         <div class="carousel-inner">
-          <?php for ($i=0; $i <8 ; $i++) {  ?>
+          <?php for ($i=1; $i <=8 ; $i++) {  ?>
           <div class="carousel-item <?= $i == 1 ?'active' : '' ?>">
             <img style="height: 300px;" class="d-block w-100" src="<?= base_url() ?>upload/banner/<?= $i ?>.jpg" alt="First slide" />
-            <div class="carousel-caption d-none d-md-block">
+            <!-- <div class="carousel-caption d-none d-md-block">
               <h3>First slide</h3>
               <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
-            </div>
+            </div> -->
           </div>
           <?php } ?>
           <!-- <div class="carousel-item">
