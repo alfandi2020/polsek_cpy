@@ -60,19 +60,25 @@
           <span class="visually-hidden">Next</span>
         </a>
       </div>
-  <div class="container-xxl flex-grow-1 container-p-y">
+  <div class="container-xxl flex-grow-1 container-p-y" style="background-color: black;">
     <div class="row text-center">
       <div class="col">
-        <a href="<?= base_url('dashboard/hotline') ?>" class="btn btn-warning" style="width: 100%;">
-          <i class="bx bx-phone bx-sm"></i><br>
-          <span style="font-size: 13px;"> Hotline</span>
-        </a>
+        <a href="<?= base_url('dashboard/hotline') ?>" class="btn rounded-pill btn-icon btn-warning">
+          <i class="bx bx-phone bx-sm"></i>
+        </a><br>
+        <span style="color: white;"> Hotline</span>
       </div>
       <div class="col">
-        <a href="<?= base_url('dashboard/add_kriminal') ?>" class="btn btn-warning" style="width: 100%;">
-          <i class='bx bx-map'></i><br>
-          <span style="font-size: 12px;">Tambah Data Pelanggaran</span>
-        </a>
+        <a href="<?= base_url('dashboard/informasi') ?>" class="btn rounded-pill btn-icon btn-warning">
+        <i class='bx bxs-bell-ring' ></i>
+        </a><br>
+        <span style="color: white;"> Informasi</span>
+      </div>
+      <div class="col">
+        <a href="<?= base_url('dashboard/filter/2') ?>" class="btn rounded-pill btn-icon btn-warning">
+        <i class='bx bx-coffee'></i>
+        </a><br>
+        <span style="color: white;"> THM & Warung Miras</span>
       </div>
     </div>
     <!-- <div class="row text-center mt-4">
@@ -91,14 +97,14 @@
         </a>
       </div>
     </div> -->
-    <div class="row text-center mt-4">
+    <!-- <div class="row text-center mt-4">
       <div class="col">
-        <a href="<?= base_url('dashboard/filter/2') ?>" class="btn btn-primary" style="width: 100%;">
-          <i class="bx bx-user bx-sm"></i><br>
+        <a href="<?= base_url('dashboard/filter/2') ?>" class="btn btn-warning">
+        <i class='bx bx-coffee'></i><br>
           <span style="font-size: 13px;"> THM & Warung Miras</span>
         </a>
       </div>
-    </div>
+    </div> -->
 
     <div class="row text-center mt-4">
       <div class="col">

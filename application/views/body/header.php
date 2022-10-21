@@ -299,9 +299,9 @@
               <li class="nav-item">
                 <a href="<?= base_url('dashboard/personil') ?>" class="nav-link"><i class='bx bxs-user-account' ></i> Personil</a>
               </li>
-              <li class="nav-item">
+              <!-- <li class="nav-item">
                 <a href="<?= base_url('dashboard/informasi') ?>" class="nav-link"><i class='bx bx-info-circle' ></i> Info</a>
-              </li>
+              </li> -->
               <li class="nav-item">
                 <a href="<?= base_url('login') ?>" class="nav-link"><i class="bx bx-user bx-sm"></i> User</a>
               </li>
