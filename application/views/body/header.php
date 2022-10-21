@@ -1,17 +1,5 @@
 <!DOCTYPE html>
 
-<!-- =========================================================
-* Sneat - Bootstrap 5 HTML Admin Template - Pro | v1.0.0
-==============================================================
-
-* Product Page: https://themeselection.com/products/sneat-bootstrap-html-admin-template/
-* Created by: ThemeSelection
-* License: You must have a valid license purchased in order to legally use the theme for your project.
-* Copyright ThemeSelection (https://themeselection.com)
-
-=========================================================
- -->
-<!-- beautify ignore:start -->
 <?php 
 // if(!isset($this->session->userdata['username'])) {
 //   redirect('login');
@@ -303,13 +291,19 @@
               </ul>
             </div>
           </nav> -->
-          <nav class="navbar navbar-dark bg-primary navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
+          <nav class="navbar navbar-dark bg-light navbar-expand d-md-none d-lg-none d-xl-none fixed-bottom">
             <ul class="navbar-nav nav-justified w-100">
               <li class="nav-item">
-                <a href="<?= base_url('kelurahan') ?>" class="nav-link"><i class="bx bx-map bx-sm"></i> Kriminal</a>
+                <a href="<?= base_url('dashboard') ?>" class="nav-link"><i class="bx bx-home bx-sm"></i> Home</a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('user') ?>" class="nav-link"><i class="bx bx-user bx-sm"></i> User</a>
+                <a href="<?= base_url('dashboard/personil') ?>" class="nav-link"><i class='bx bxs-user-account' ></i> Personil</a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('dashboard/informasi') ?>" class="nav-link"><i class='bx bx-info-circle' ></i> Info</a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('login') ?>" class="nav-link"><i class="bx bx-user bx-sm"></i> User</a>
               </li>
             </ul>
           </nav>

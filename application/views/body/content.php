@@ -75,22 +75,22 @@
         </a>
       </div>
     </div>
-    <div class="row text-center mt-4">
+    <!-- <div class="row text-center mt-4">
       <div class="col">
         <a href="<?= base_url('dashboard/informasi') ?>" class="btn btn-primary" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           <span style="font-size: 13px;">Informasi</span>
         </a>
       </div>
-    </div>
-    <div class="row text-center mt-4">
+    </div> -->
+    <!-- <div class="row text-center mt-4">
       <div class="col">
         <a href="<?= base_url('dashboard/personil') ?>" class="btn btn-warning" style="width: 100%;">
           <i class="bx bx-user bx-sm"></i><br>
           <span style="font-size: 13px;">Data Personil</span>
         </a>
       </div>
-    </div>
+    </div> -->
     <div class="row text-center mt-4">
       <div class="col">
         <a href="<?= base_url('dashboard/filter/2') ?>" class="btn btn-primary" style="width: 100%;">
@@ -630,7 +630,7 @@
 </div>
 <!-- / Content -->
 
-<div class="content-backdrop fade"></div>
+<!-- <div class="content-backdrop fade"></div> -->
 </div>
 <!-- Content wrapper -->
 </div>
