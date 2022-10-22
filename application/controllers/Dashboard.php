@@ -281,6 +281,85 @@ class Dashboard
             redirect('dashboard/detail_personil/'.$id_personil);
        }
    }
+   function banner()
+   {
+    $data = [
+        'nama' => $this->session->userdata('nama'),
+        'title' => "Selamat Datang",
+        'titlePage' => 'Polsek Cipayung',
+        'data' => $this->db->get('dt_personil')->result()
+    ];
+    $this->load->view('body/header', $data);
+    $this->load->view('body/dashboard/banner');
+    $this->load->view('body/footer');
+   }
+   function save_banner()
+   {
+    // var_dump($_FILES['file_banner']) > 0);
+
+    // for ($i=1; $i <=10 ; $i++) { 
+        if ($_FILES['file_banner1']['name'] == true) {
+            $nama_file = 'file_banner1';
+        }
+        if ($_FILES['file_banner2']['name'] == true) {
+            $nama_file = 'file_banner2';
+        }
+        if ($_FILES['file_banner3']['name'] == true) {
+            $nama_file = 'file_banner3';
+        }
+        elseif ($_FILES['file_banner4']['name'] == true) {
+            $nama_file = 'file_banner4';
+        }
+        elseif ($_FILES['file_banner5']['name'] == true) {
+            $nama_file = 'file_banner5';
+        }
+        elseif ($_FILES['file_banner6']['name'] == true) {
+            $nama_file = 'file_banner6';
+        }
+        elseif ($_FILES['file_banner7']['name'] == true) {
+            $nama_file = 'file_banner7';
+        }
+        elseif ($_FILES['file_banner8']['name'] == true) {
+            $nama_file = 'file_banner8';
+        }
+        elseif ($_FILES['file_banner9']['name'] == true) {
+            $nama_file = 'file_banner9';
+        }
+        elseif ($_FILES['file_banner10']['name'] == true) {
+            $nama_file = 'file_banner10';
+        }
+      
+    
+
+    // $name = $_FILES[$nama_file]["name"];
+    // $ext = end((explode(".", $name)));
+    $path_parts = pathinfo($_FILES[$nama_file]["name"]);
+    $extension = $path_parts['extension'];    
+    $config['upload_path']          = './upload/banner';
+    $config['allowed_types']        = 'jpg|png|jpeg';
+    $config['max_size']             = 3000;
+    $config['encrypt_name']             = true;
+    
+    // $config['max_width']            = 1024;
+    // $config['max_height']           = 768;
+
+    $this->load->library('upload', $config);
+
+    if ( ! $this->upload->do_upload($nama_file))
+    {
+           redirect('dashboard');
+    }
+    else
+    {
+            $data = array('upload_data' => $this->upload->data());
+            $this->db->where('id',preg_replace("/[^0-9]/", "",$nama_file));
+            $this->db->set('nama',$data['upload_data']['file_name']);
+            $this->db->update('tb_banner');
+            $this->session->set_flashdata('msg','<div class="alert alert-primary">Banner ke '.preg_replace("/[^0-9]/", "",$nama_file).' berhasil di update </div>');
+            redirect('dashboard/banner');
+
+    }
+   }
 
     
 }
