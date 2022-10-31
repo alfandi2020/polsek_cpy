@@ -31,12 +31,21 @@
 	<!-- <script src="https://maps.googleapis.com/maps/api/js"></script> -->
     <!-- Place this tag in your head or just before your close body tag. -->
     <script async defer src="https://buttons.github.io/buttons.js"></script>
+	<script src="<?= base_url() ?>assets/js/instafeed.js "></script>
+
     <script>
   $(document).ready(function(){
     $('#tabel-data').DataTable();
 });
 var base_url = '<?=base_url()?>';
   </script>
+
+<script type="text/javascript">
+    var feed = new Instafeed({
+      accessToken: 'f16027298f23745d883104a96c841e58'
+    });
+    feed.run();
+</script>
 
 <!-- Rupiah 1 -->
   <script type="text/javascript">

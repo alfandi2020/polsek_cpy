@@ -1,44 +1,36 @@
-<style>
-  .carousel .carousel-item {
-    height: 300px;
-  }
-
-  .carousel-item img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-height: 300px;
-  }
-</style>
 <!-- Content wrapper -->
 <div class="content-wrapper">
   <!-- Content -->
-  <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-bs-target="#carouselExample" data-bs-slide-to="1" class="active"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="3"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="4"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="6"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="7"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="8"></li>
-      <li data-bs-target="#carouselExample" data-bs-slide-to="9"></li>
-    </ol>
-    <div class="carousel-inner">
-      <?php
-     $xx = $this->db->get('tb_banner')->result();
-      foreach ($xx as $x) {  ?>
-      <div class="carousel-item <?= $x->id == 1 ?'active' : '' ?>">
-        <img style="height: 300px;" class=" d-block w-100" src="<?= base_url() ?>upload/banner/<?= $x->nama ?>"
-          alt="First slide" />
-        <!-- <div class="carousel-caption d-none d-md-block">
+
+  <div class="container-xxl">
+    <div class="row" style="background-color: black;">
+      <div class="col-md-12 col-lg-12">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-bs-target="#carouselExample" data-bs-slide-to="1" class="active"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="2"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="3"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="4"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="5"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="6"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="7"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="8"></li>
+            <li data-bs-target="#carouselExample" data-bs-slide-to="9"></li>
+          </ol>
+          <div class="carousel-inner">
+            <?php
+            $xx = $this->db->get('tb_banner')->result();
+              foreach ($xx as $x) {  ?>
+            <div class="carousel-item <?= $x->id == 1 ?'active' : '' ?>">
+              <img style="height: 300px;" class=" d-block w-100" src="<?= base_url() ?>upload/banner/<?= $x->nama ?>"
+                alt="First slide" />
+              <!-- <div class="carousel-caption d-none d-md-block">
               <h3>First slide</h3>
               <p>Eos mutat malis maluisset et, agam ancillae quo te, in vim congue pertinacia.</p>
             </div> -->
-      </div>
-      <?php } ?>
-      <!-- <div class="carousel-item">
+            </div>
+            <?php } ?>
+            <!-- <div class="carousel-item">
             <img class="d-block w-100" src="<?= base_url() ?>assets/img/elements/2.jpg" alt="Second slide" />
             <div class="carousel-caption d-none d-md-block">
               <h3>Second slide</h3>
@@ -52,341 +44,92 @@
               <p>Lorem ipsum dolor sit amet, virtute consequat ea qui, minim graeco mel no.</p>
             </div>
           </div> -->
-    </div>
-    <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </a>
-  </div>
-  <div class="container-xxl flex-grow-1 container-p-y" style="background-color: black;">
-    <div class="row text-center">
-      <div class="col">
-        <a href="<?= base_url('dashboard/hotline') ?>" class="btn rounded-pill btn-icon btn-warning">
-          <i class="bx bx-phone bx-sm"></i>
-        </a><br>
-        <span style="color: white;"> Hotline</span>
-      </div>
-      <div class="col">
-        <a href="<?= base_url('dashboard/informasi') ?>" class="btn rounded-pill btn-icon btn-warning">
-          <i class='bx bxs-bell-ring'></i>
-        </a><br>
-        <span style="color: white;"> Informasi</span>
-      </div>
-      <div class="col">
-        <a href="<?= base_url('dashboard/filter/2') ?>" class="btn rounded-pill btn-icon btn-warning">
-          <i class='bx bx-coffee'></i>
-        </a><br>
-        <span style="color: white;"> THM & Warung Miras</span>
-      </div>
-    </div>
-    <div class="row text-center">
-      <div class="col">
-        <a href="<?= base_url('dashboard/ada_polisi') ?>" class="btn rounded-pill btn-icon btn-warning">
-          <i class="bx bx-user bx-sm"></i>
-        </a><br>
-        <span style="color: white;"> Ada Polisi</span>
-      </div>
-      <div class="col">
-        <a href="<?= base_url('dashboard/filter/5') ?>" class="btn rounded-pill btn-icon btn-warning">
-          <i class='bx bxs-bell-ring'></i>
-        </a><br>
-        <span style="color: white;"> Kejahatan Jalanan & kenakalan Remaja</span>
-      </div>
-      <div class="col">
-        <a href="<?= base_url('dashboard/filter/4') ?>" class="btn rounded-pill btn-icon btn-warning">
-          <i class='bx bx-coffee'></i>
-        </a><br>
-        <span style="color: white;"> 3C</span>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <!-- Order Statistics -->
-    <div class="col-md-6 col-lg-4 col-xl-4 order-0 mb-4">
-      <div class="card h-100">
-        <div class="card-header d-flex align-items-center justify-content-between pb-0">
-          <div class="card-title mb-0">
-            <h5 class="m-0 me-2">Instagram</h5>
-            <!-- <small class="text-muted">42.82k Total Sales</small> -->
           </div>
-          <!-- <div class="dropdown">
-            <button class="btn p-0" type="button" id="orederStatistics" data-bs-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
-              <i class="bx bx-dots-vertical-rounded"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="orederStatistics">
-              <a class="dropdown-item" href="javascript:void(0);">Select All</a>
-              <a class="dropdown-item" href="javascript:void(0);">Refresh</a>
-              <a class="dropdown-item" href="javascript:void(0);">Share</a>
-            </div>
-          </div> -->
+          <a class="carousel-control-prev" href="#carouselExample" role="button" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExample" role="button" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
         </div>
-        <div class="card-body">
-          awdw
-          <!-- <div class="d-flex justify-content-between align-items-center mb-3">
-            <div class="d-flex flex-column align-items-center gap-1">
-              <h2 class="mb-2">8,258</h2>
-              <span>Total Orders</span>
+        <!-- <div class="card">
+          <div class="row row-bordered g-0">
+            <div class="col-md-12">
+              <div class="card-header">
+                <h5 class="card-title mb-0">Report</h5>
+                <small class="card-subtitle">Yearly report</small>
+              </div>
+              <div class="card-body">
+                awdwa
+                <div id="chart2"></div>
+              </div>
             </div>
-            <div id="orderStatisticsChart"></div>
-          </div> -->
-          <!-- <ul class="p-0 m-0">
-            <li class="d-flex mb-4 pb-1">
-              <div class="avatar flex-shrink-0 me-3">
-                <span class="avatar-initial rounded bg-label-primary"><i class="bx bx-mobile-alt"></i></span>
-              </div>
-              <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Electronic</h6>
-                  <small class="text-muted">Mobile, Earbuds, TV</small>
-                </div>
-                <div class="user-progress">
-                  <small class="fw-semibold">82.5k</small>
-                </div>
-              </div>
-            </li>
-            <li class="d-flex mb-4 pb-1">
-              <div class="avatar flex-shrink-0 me-3">
-                <span class="avatar-initial rounded bg-label-success"><i class="bx bx-closet"></i></span>
-              </div>
-              <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Fashion</h6>
-                  <small class="text-muted">T-shirt, Jeans, Shoes</small>
-                </div>
-                <div class="user-progress">
-                  <small class="fw-semibold">23.8k</small>
-                </div>
-              </div>
-            </li>
-            <li class="d-flex mb-4 pb-1">
-              <div class="avatar flex-shrink-0 me-3">
-                <span class="avatar-initial rounded bg-label-info"><i class="bx bx-home-alt"></i></span>
-              </div>
-              <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Decor</h6>
-                  <small class="text-muted">Fine Art, Dining</small>
-                </div>
-                <div class="user-progress">
-                  <small class="fw-semibold">849k</small>
-                </div>
-              </div>
-            </li>
-            <li class="d-flex">
-              <div class="avatar flex-shrink-0 me-3">
-                <span class="avatar-initial rounded bg-label-secondary"><i class="bx bx-football"></i></span>
-              </div>
-              <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                <div class="me-2">
-                  <h6 class="mb-0">Sports</h6>
-                  <small class="text-muted">Football, Cricket Kit</small>
-                </div>
-                <div class="user-progress">
-                  <small class="fw-semibold">99</small>
-                </div>
-              </div>
-            </li>
-          </ul> -->
+          </div>
+        </div> -->
+      </div>
+      <div class="col-md-12 col-lg-12">
+        <div class="row text-center mt-3">
+          <div class="col">
+            <a href="<?= base_url('dashboard/hotline') ?>" class="btn rounded-pill btn-icon btn-warning">
+              <i class="bx bx-phone bx-sm"></i>
+            </a><br>
+            <span style="color: white;"> Hotline</span>
+          </div>
+          <div class="col">
+            <a href="<?= base_url('dashboard/informasi') ?>" class="btn rounded-pill btn-icon btn-warning">
+              <i class='bx bxs-bell-ring'></i>
+            </a><br>
+            <span style="color: white;"> Informasi</span>
+          </div>
+          <div class="col">
+            <a href="<?= base_url('dashboard/filter/2') ?>" class="btn rounded-pill btn-icon btn-warning">
+              <i class='bx bx-coffee'></i>
+            </a><br>
+            <span style="color: white;"> THM & Warung Miras</span>
+          </div>
+        </div>
+        <div class="row text-center mb-3">
+          <div class="col">
+            <a href="<?= base_url('dashboard/ada_polisi') ?>" class="btn rounded-pill btn-icon btn-warning">
+              <i class="bx bx-user bx-sm"></i>
+            </a><br>
+            <span style="color: white;"> Ada Polisi</span>
+          </div>
+          <div class="col">
+            <a href="<?= base_url('dashboard/filter/5') ?>" class="btn rounded-pill btn-icon btn-warning">
+              <i class='bx bxs-bell-ring'></i>
+            </a><br>
+            <span style="color: white;"> Kejahatan Jalanan & kenakalan Remaja</span>
+          </div>
+          <div class="col">
+            <a href="<?= base_url('dashboard/filter/4') ?>" class="btn rounded-pill btn-icon btn-warning">
+              <i class='bx bx-coffee'></i>
+            </a><br>
+            <span style="color: white;"> 3C</span>
+          </div>
         </div>
       </div>
-      <br><br><br>
-
     </div>
-    <!--/ Order Statistics -->
+    <div class="row mt-4">
+        <div class="col-md-12 col-lg-12">
+          <h4>Youtube</h4>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lz_J1oeY_vo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row mt-4">
+        <div class="col-md-12 col-lg-12">
+          <h4>Instagram</h4>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lz_J1oeY_vo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <!-- / Content -->
 
-    <!-- Expense Overview -->
-    <!-- <div class="col-md-6 col-lg-4 order-1 mb-4">
-                  <div class="card h-100">
-                    <div class="card-header">
-                      <ul class="nav nav-pills" role="tablist">
-                        <li class="nav-item">
-                          <button
-                            type="button"
-                            class="nav-link active"
-                            role="tab"
-                            data-bs-toggle="tab"
-                            data-bs-target="#navs-tabs-line-card-income"
-                            aria-controls="navs-tabs-line-card-income"
-                            aria-selected="true"
-                          >
-                            Income
-                          </button>
-                        </li>
-                        <li class="nav-item">
-                          <button type="button" class="nav-link" role="tab">Expenses</button>
-                        </li>
-                        <li class="nav-item">
-                          <button type="button" class="nav-link" role="tab">Profit</button>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="card-body px-0">
-                      <div class="tab-content p-0">
-                        <div class="tab-pane fade show active" id="navs-tabs-line-card-income" role="tabpanel">
-                          <div class="d-flex p-4 pt-3">
-                            <div class="avatar flex-shrink-0 me-3">
-                              <img src="<?= base_url('assets/img/icons/unicons/wallet.png');?>" alt="User" />
-                            </div>
-                            <div>
-                              <small class="text-muted d-block">Total Balance</small>
-                              <div class="d-flex align-items-center">
-                                <h6 class="mb-0 me-1">$459.10</h6>
-                                <small class="text-success fw-semibold">
-                                  <i class="bx bx-chevron-up"></i>
-                                  42.9%
-                                </small>
-                              </div>
-                            </div>
-                          </div>
-                          <div id="incomeChart"></div>
-                          <div class="d-flex justify-content-center pt-4 gap-2">
-                            <div class="flex-shrink-0">
-                              <div id="expensesOfWeek"></div>
-                            </div>
-                            <div>
-                              <p class="mb-n1 mt-1">Expenses This Week</p>
-                              <small class="text-muted">$39 less than last week</small>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
-    <!--/ Expense Overview -->
-
-    <!-- Transactions -->
-    <!-- <div class="col-md-6 col-lg-4 order-2 mb-4">
-                  <div class="card h-100">
-                    <div class="card-header d-flex align-items-center justify-content-between">
-                      <h5 class="card-title m-0 me-2">Transactions</h5>
-                      <div class="dropdown">
-                        <button
-                          class="btn p-0"
-                          type="button"
-                          id="transactionID"
-                          data-bs-toggle="dropdown"
-                          aria-haspopup="true"
-                          aria-expanded="false"
-                        >
-                          <i class="bx bx-dots-vertical-rounded"></i>
-                        </button>
-                        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="transactionID">
-                          <a class="dropdown-item" href="javascript:void(0);">Last 28 Days</a>
-                          <a class="dropdown-item" href="javascript:void(0);">Last Month</a>
-                          <a class="dropdown-item" href="javascript:void(0);">Last Year</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="card-body">
-                      <ul class="p-0 m-0">
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar flex-shrink-0 me-3">
-                            <img src="<?= base_url('assets/img/icons/unicons/paypal.png');?>" alt="User" class="rounded" />
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <small class="text-muted d-block mb-1">Paypal</small>
-                              <h6 class="mb-0">Send money</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <h6 class="mb-0">+82.6</h6>
-                              <span class="text-muted">USD</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar flex-shrink-0 me-3">
-                            <img src="<?= base_url('assets/img/icons/unicons/wallet.png');?>" alt="User" class="rounded" />
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <small class="text-muted d-block mb-1">Wallet</small>
-                              <h6 class="mb-0">Mac'D</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <h6 class="mb-0">+270.69</h6>
-                              <span class="text-muted">USD</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar flex-shrink-0 me-3">
-                            <img src="<?= base_url('assets/img/icons/unicons/chart.png');?>" alt="User" class="rounded" />
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <small class="text-muted d-block mb-1">Transfer</small>
-                              <h6 class="mb-0">Refund</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <h6 class="mb-0">+637.91</h6>
-                              <span class="text-muted">USD</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar flex-shrink-0 me-3">
-                            <img src="<?= base_url('assets/img/icons/unicons/cc-success.png');?>" alt="User" class="rounded" />
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <small class="text-muted d-block mb-1">Credit Card</small>
-                              <h6 class="mb-0">Ordered Food</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <h6 class="mb-0">-838.71</h6>
-                              <span class="text-muted">USD</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex mb-4 pb-1">
-                          <div class="avatar flex-shrink-0 me-3">
-                            <img src="<?= base_url('assets/img/icons/unicons/wallet.png');?>" alt="User" class="rounded" />
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <small class="text-muted d-block mb-1">Wallet</small>
-                              <h6 class="mb-0">Starbucks</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <h6 class="mb-0">+203.33</h6>
-                              <span class="text-muted">USD</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="d-flex">
-                          <div class="avatar flex-shrink-0 me-3">
-                            <img src="<?= base_url('assets/img/icons/unicons/cc-warning.png');?>" alt="User" class="rounded" />
-                          </div>
-                          <div class="d-flex w-100 flex-wrap align-items-center justify-content-between gap-2">
-                            <div class="me-2">
-                              <small class="text-muted d-block mb-1">Mastercard</small>
-                              <h6 class="mb-0">Ordered Food</h6>
-                            </div>
-                            <div class="user-progress d-flex align-items-center gap-1">
-                              <h6 class="mb-0">-92.45</h6>
-                              <span class="text-muted">USD</span>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div> -->
-    <!--/ Transactions -->
+    <div class="content-backdrop fade"></div>
   </div>
-</div>
-<!-- / Content -->
 
-<!-- <div class="content-backdrop fade"></div> -->
-</div>
-<!-- Content wrapper -->
+  <!-- Content wrapper -->
 </div>
 
 
